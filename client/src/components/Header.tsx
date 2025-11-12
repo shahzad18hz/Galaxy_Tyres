@@ -40,17 +40,17 @@ export function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className={`flex items-center justify-between h-16 md:h-20 ${isRTL ? 'flex-row-reverse' : ''}`}>
           <Link href="/" data-testid="link-home">
             <motion.div
-              className="flex items-center space-x-3 cursor-pointer"
+              className={`flex items-center gap-3 cursor-pointer ${isRTL ? 'flex-row-reverse' : ''}`}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
               <div className="w-10 h-10 bg-primary rounded-md flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-xl">GT</span>
               </div>
-              <div className={`${isRTL ? 'space-x-reverse' : ''}`}>
+              <div className={`${isRTL ? 'text-right' : 'text-left'}`}>
                 <h1 className="text-lg md:text-xl font-bold text-foreground">
                   {content.company.name}
                 </h1>
@@ -78,7 +78,7 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-2">
+          <div className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
             <Button
               variant="ghost"
               size="icon"

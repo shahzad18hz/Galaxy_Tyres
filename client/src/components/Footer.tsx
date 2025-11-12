@@ -2,10 +2,17 @@ import { Link } from 'wouter';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
+import forcelandLogo from '@assets/generated_images/Forceland_tire_logo_39b632c1.png';
+import dunlopLogo from '@assets/generated_images/Dunlop_style_logo_ce45e10b.png';
+import yokohamaLogo from '@assets/generated_images/Yokohama_style_logo_b0756d16.png';
+import michelinLogo from '@assets/generated_images/Michelin_style_logo_76006bae.png';
+import bridgestoneLogo from '@assets/generated_images/Bridgestone_style_logo_cf94c6cf.png';
+import continentalLogo from '@assets/generated_images/Continental_style_logo_d9204fcf.png';
+import hankookLogo from '@assets/generated_images/Hankook_style_logo_dc961046.png';
+import pirelliLogo from '@assets/generated_images/Pirelli_style_logo_acbe6b81.png';
+
 export function Footer() {
   const { content, isRTL } = useLanguage();
-
-  const brands = content.services.brands.brandList;
 
   const navLinks = [
     { path: '/', label: content.nav.home },
@@ -21,18 +28,33 @@ export function Footer() {
     { icon: Linkedin, label: 'LinkedIn', href: '#' },
   ];
 
+  const brandLogos = [
+    forcelandLogo,
+    dunlopLogo,
+    yokohamaLogo,
+    michelinLogo,
+    bridgestoneLogo,
+    continentalLogo,
+    hankookLogo,
+    pirelliLogo,
+  ];
+
   return (
     <footer className="bg-card border-t border-card-border mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex flex-wrap items-center justify-center gap-6 py-6 border-b border-border">
-          {brands.map((brand, index) => (
-            <span
+          {brandLogos.map((logo, index) => (
+            <div
               key={index}
-              className="px-4 py-2 bg-background text-sm font-medium text-muted-foreground rounded-md border border-border hover-elevate transition-all duration-300"
+              className="h-16 w-32 bg-background rounded-md border border-border hover-elevate transition-all duration-300 overflow-hidden"
               data-testid={`footer-brand-${index}`}
             >
-              {brand}
-            </span>
+              <img
+                src={logo}
+                alt={`Brand logo ${index + 1}`}
+                className="w-full h-full object-contain p-2"
+              />
+            </div>
           ))}
         </div>
       </div>
@@ -46,17 +68,6 @@ export function Footer() {
             <p className="text-sm text-muted-foreground leading-relaxed">
               {content.footer.about.description}
             </p>
-            <div className="flex flex-wrap gap-2 pt-2">
-              {brands.slice(0, 4).map((brand, index) => (
-                <span
-                  key={index}
-                  className="px-3 py-1 bg-background text-xs font-medium text-muted-foreground rounded-md border border-border"
-                  data-testid={`text-brand-${index}`}
-                >
-                  {brand}
-                </span>
-              ))}
-            </div>
           </div>
 
           <div className={`space-y-4 ${isRTL ? 'text-right' : 'text-left'}`}>
