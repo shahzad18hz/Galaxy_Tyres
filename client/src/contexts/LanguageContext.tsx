@@ -130,14 +130,14 @@ const englishContent: Content = {
   },
   home: {
     hero: {
-      title: 'Welcome to Galaxy Tires Trading',
+      title: 'Welcome to Galaxy tires trading FZE',
       subtitle: 'Driving excellence on every road. Official partner of Forceland Tyres, delivering world-class tyre technology to UAE and international markets.',
       cta1: 'Explore Products',
       cta2: 'Contact Us',
     },
     welcome: {
       title: 'Your Global Tyre Partner',
-      description: 'At Galaxy Tires Trading, we drive excellence on every road. As an official partner of Forceland Tyres and Factory, we proudly bring world-class tyre technology to the UAE and international markets. Along with Forceland, we supply a wide range of premium global tyre brands, providing high-performance, durable, and cost-effective tyre solutions for passenger cars, SUVs, and light commercial vehicles.',
+      description: 'At Galaxy tires trading FZE, we drive excellence on every road. As an official partner of Forceland Tyres and Factory, we proudly bring world-class tyre technology to the UAE and international markets. Along with Forceland, we supply a wide range of premium global tyre brands, providing high-performance, durable, and cost-effective tyre solutions for passenger cars, SUVs, and light commercial vehicles.',
     },
     whyChoose: {
       title: 'Why Choose Us',
@@ -167,14 +167,14 @@ const englishContent: Content = {
   },
   about: {
     hero: {
-      title: 'About Galaxy Tires Trading',
+      title: 'About Galaxy tires trading FZE',
     },
     overview: {
       title: 'Who We Are',
       paragraphs: [
-        'Galaxy Tires Trading FZE is a UAE-based tyre trading company specializing in the import, export, and distribution of high-quality tyres.',
+        'Galaxy tires trading FZE is a UAE-based tyre trading company specializing in the import, export, and distribution of high-quality tyres.',
         'Through our strong partnership with Forceland Tyres and Factory, we ensure our clients receive tyres that combine advanced design, international safety standards, and long-lasting performance.',
-        'Located in the UAE Free Zone, Galaxy Tires Trading is strategically positioned to serve both local and international markets efficiently.',
+        'Located in the UAE Free Zone, Galaxy tires trading FZE is strategically positioned to serve both local and international markets efficiently.',
         'Our commitment to quality, trust, and customer satisfaction has made us one of the most reliable tyre suppliers in the region.',
         'At Galaxy Tires, we believe every journey deserves a dependable grip — and we make sure our tyres deliver just that.',
       ],
@@ -241,14 +241,14 @@ const englishContent: Content = {
     },
     info: {
       title: 'Contact Information',
-      address: 'Galaxy tires trading FZE  Jebel Ali - Jafza one  Freezone - UAE  Building B - floor 13 office 1',
+      address: 'Jebel Ali - Jafza one  Freezone - UAE  Building B - floor 13 office 1',
       phone: '+971508679467',
       email: 'anasbaghdad12@gmail.com',
     },
   },
   footer: {
     about: {
-      title: 'About Galaxy Tires',
+      title: 'About Galaxy tires trading FZE',
       description: 'Official Partner of Forceland Tyres and distributor of premium global tyre brands serving UAE and international markets.',
     },
     quickLinks: {
@@ -257,12 +257,12 @@ const englishContent: Content = {
     contact: {
       title: 'Contact Us',
     },
-    copyright: '© 2025 Galaxy Tires Trading FZE. All rights reserved.',
+    copyright: '© 2025 Galaxy tires trading FZE. All rights reserved.',
   },
   company: {
     name: 'Galaxy Tires',
     tagline: 'Driving Quality. Delivering Trust.',
-    fullName: 'Galaxy Tires Trading FZE',
+    fullName: 'Galaxy tires trading FZE',
   },
 };
 
