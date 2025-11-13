@@ -130,25 +130,29 @@ const englishContent: Content = {
   },
   home: {
     hero: {
-      title: 'Welcome to Galaxy tires trading FZE',
-      subtitle: 'Driving excellence on every road. Official partner of Forceland Tyres, delivering world-class tyre technology to UAE and international markets.',
+      title: 'Welcome to Galaxy Tires Trading FZE',
+      subtitle:
+        'Driving excellence on every road. Official partner of Forceland Tyres, delivering world-class tyre technology to UAE and international markets.',
       cta1: 'Explore Products',
       cta2: 'Contact Us',
     },
     welcome: {
       title: 'Your Global Tyre Partner',
-      description: 'At Galaxy tires trading FZE, we drive excellence on every road. As an official partner of Forceland Tyres and Factory, we proudly bring world-class tyre technology to the UAE and international markets. Along with Forceland, we supply a wide range of premium global tyre brands, providing high-performance, durable, and cost-effective tyre solutions for passenger cars, SUVs, and light commercial vehicles.',
+      description:
+        'At Galaxy Tires Trading FZE, we drive excellence on every road. As an official partner of Forceland Tyres and Factory, we proudly bring world-class tyre technology to the UAE and international markets. Along with Forceland, we supply a wide range of premium global tyre brands, providing high-performance, durable, and cost-effective tyre solutions for passenger cars, SUVs, and light commercial vehicles.',
     },
     whyChoose: {
       title: 'Why Choose Us',
       features: [
         {
           title: 'Official Partner of Forceland Tyres',
-          description: 'Exclusive partnership ensuring authentic products and direct factory pricing',
+          description:
+            'Exclusive partnership ensuring authentic products and direct factory pricing',
         },
         {
           title: 'Distributor of Leading Global Tyre Brands',
-          description: 'Comprehensive selection from the world\'s most trusted manufacturers',
+          description:
+            "Comprehensive selection from the world's most trusted manufacturers",
         },
         {
           title: 'Competitive Prices with Consistent Quality',
@@ -162,26 +166,27 @@ const englishContent: Content = {
     },
     brands: {
       title: 'Premium Global Brands',
-      subtitle: 'We distribute the world\'s most trusted tyre brands',
+      subtitle: "We distribute the world's most trusted tyre brands",
     },
   },
   about: {
     hero: {
-      title: 'About Galaxy tires trading FZE',
+      title: 'About Galaxy Tires Trading FZE',
     },
     overview: {
       title: 'Who We Are',
       paragraphs: [
-        'Galaxy tires trading FZE is a UAE-based tyre trading company specializing in the import, export, and distribution of high-quality tyres.',
+        'Galaxy Tires Trading FZE is a UAE-based tyre trading company specializing in the import, export, and distribution of high-quality tyres.',
         'Through our strong partnership with Forceland Tyres and Factory, we ensure our clients receive tyres that combine advanced design, international safety standards, and long-lasting performance.',
-        'Located in the UAE Free Zone, Galaxy tires trading FZE is strategically positioned to serve both local and international markets efficiently.',
+        'Located in the UAE Free Zone, Galaxy Tires Trading FZE is strategically positioned to serve both local and international markets efficiently.',
         'Our commitment to quality, trust, and customer satisfaction has made us one of the most reliable tyre suppliers in the region.',
-        'At Galaxy Tires, we believe every journey deserves a dependable grip — and we make sure our tyres deliver just that.',
+        'At Galaxy Tires Trading FZE, we believe every journey deserves a dependable grip — and we make sure our tyres deliver just that.',
       ],
     },
     vision: {
       title: 'Our Vision',
-      content: 'To become the most trusted and preferred tyre trading company in the Middle East, known for reliability, innovation, and partnerships with globally recognized brands.',
+      content:
+        'To become the most trusted and preferred tyre trading company in the Middle East, known for reliability, innovation, and partnerships with globally recognized brands.',
     },
     mission: {
       title: 'Our Mission',
@@ -194,7 +199,8 @@ const englishContent: Content = {
     },
     purpose: {
       title: 'Our Purpose',
-      content: 'Our purpose is to connect drivers, retailers, and businesses with the most reliable tyre solutions in the world. We aim to make mobility safer, smoother, and more sustainable through continuous improvement and trusted global collaborations.',
+      content:
+        'Our purpose is to connect drivers, retailers, and businesses with the most reliable tyre solutions in the world. We aim to make mobility safer, smoother, and more sustainable through continuous improvement and trusted global collaborations.',
     },
   },
   services: {
@@ -207,15 +213,18 @@ const englishContent: Content = {
       items: [
         {
           title: 'Passenger Car Tyres',
-          description: 'High-performance tyres designed for comfort, safety, and fuel efficiency on city roads and highways.',
+          description:
+            'High-performance tyres designed for comfort, safety, and fuel efficiency on city roads and highways.',
         },
         {
           title: 'SUV & 4x4 Tyres',
-          description: 'Rugged and reliable tyres built for both on-road comfort and off-road adventures.',
+          description:
+            'Rugged and reliable tyres built for both on-road comfort and off-road adventures.',
         },
         {
           title: 'Light Commercial Vehicle Tyres',
-          description: 'Durable tyres engineered for commercial use with enhanced load capacity and longevity.',
+          description:
+            'Durable tyres engineered for commercial use with enhanced load capacity and longevity.',
         },
       ],
     },
@@ -223,13 +232,22 @@ const englishContent: Content = {
       title: 'Our Brands',
       mainBrand: 'Main Brand',
       otherBrands: 'Other Premium Brands',
-      brandList: ['Forceland', 'Dunlop', 'Yokohama', 'Michelin', 'Bridgestone', 'Continental', 'Hankook', 'Pirelli'],
+      brandList: [
+        'Forceland',
+        'Dunlop',
+        'Yokohama',
+        'Michelin',
+        'Bridgestone',
+        'Continental',
+        'Hankook',
+        'Pirelli',
+      ],
     },
   },
   contact: {
     hero: {
       title: 'Get In Touch',
-      subtitle: 'We\'re here to help with all your tyre needs',
+      subtitle: "We're here to help with all your tyre needs",
     },
     form: {
       title: 'Send Us a Message',
@@ -241,15 +259,17 @@ const englishContent: Content = {
     },
     info: {
       title: 'Contact Information',
-      address: 'Jebel Ali - Jafza one  Freezone - UAE  Building B - floor 13 office 1',
+      address:
+        'Galaxy Tires Trading FZE Jebel Ali - Jafza one Freezone - UAE Building B - floor 13 office 1',
       phone: '+971508679467',
       email: 'anasbaghdad12@gmail.com',
     },
   },
   footer: {
     about: {
-      title: 'About Galaxy tires trading FZE',
-      description: 'Official Partner of Forceland Tyres and distributor of premium global tyre brands serving UAE and international markets.',
+      title: 'About Galaxy Tires Trading FZE',
+      description:
+        'Official Partner of Forceland Tyres and distributor of premium global tyre brands serving UAE and international markets.',
     },
     quickLinks: {
       title: 'Quick Links',
@@ -257,12 +277,12 @@ const englishContent: Content = {
     contact: {
       title: 'Contact Us',
     },
-    copyright: '© 2025 Galaxy tires trading FZE. All rights reserved.',
+    copyright: '© 2025 Galaxy Tires Trading FZE. All rights reserved.',
   },
   company: {
     name: 'Galaxy Tires',
     tagline: 'Driving Quality. Delivering Trust.',
-    fullName: 'Galaxy tires trading FZE',
+    fullName: 'Galaxy Tires Trading FZE',
   },
 };
 
@@ -275,25 +295,29 @@ const arabicContent: Content = {
   },
   home: {
     hero: {
-      title: 'مرحباً بكم في جالاكسي لتجارة الإطارات',
-      subtitle: 'نقود التميز على كل طريق. الشريك الرسمي لإطارات فورس لاند، نقدم تكنولوجيا الإطارات العالمية إلى الإمارات والأسواق الدولية.',
+      title: 'مرحباً بكم في جالاكسي لتجارة الإطارات ش.ذ.م.م',
+      subtitle:
+        'نقود التميز على كل طريق. الشريك الرسمي لإطارات فورس لاند، نقدم تكنولوجيا الإطارات العالمية إلى الإمارات والأسواق الدولية.',
       cta1: 'استكشف المنتجات',
       cta2: 'اتصل بنا',
     },
     welcome: {
       title: 'شريكك العالمي للإطارات',
-      description: 'في جالاكسي لتجارة الإطارات، نقود التميز على كل طريق. كشريك رسمي لإطارات ومصنع فورس لاند، نفخر بتقديم تكنولوجيا الإطارات العالمية إلى الإمارات والأسواق الدولية. إلى جانب فورس لاند، نوفر مجموعة واسعة من العلامات التجارية العالمية المتميزة للإطارات، نقدم حلول إطارات عالية الأداء ومتينة وفعالة من حيث التكلفة لسيارات الركاب والسيارات الرياضية متعددة الاستخدامات والمركبات التجارية الخفيفة.',
+      description:
+        'في جالاكسي لتجارة الإطارات ش.ذ.م.م، نقود التميز على كل طريق. كشريك رسمي لإطارات ومصنع فورس لاند، نفخر بتقديم تكنولوجيا الإطارات العالمية إلى الإمارات والأسواق الدولية. إلى جانب فورس لاند، نوفر مجموعة واسعة من العلامات التجارية العالمية المتميزة للإطارات، نقدم حلول إطارات عالية الأداء ومتينة وفعالة من حيث التكلفة لسيارات الركاب والسيارات الرياضية متعددة الاستخدامات والمركبات التجارية الخفيفة.',
     },
     whyChoose: {
       title: 'لماذا تختارنا',
       features: [
         {
           title: 'الشريك الرسمي لإطارات فورس لاند',
-          description: 'شراكة حصرية تضمن المنتجات الأصلية والأسعار المباشرة من المصنع',
+          description:
+            'شراكة حصرية تضمن المنتجات الأصلية والأسعار المباشرة من المصنع',
         },
         {
           title: 'موزع للعلامات التجارية العالمية الرائدة',
-          description: 'تشكيلة شاملة من أكثر الشركات المصنعة الموثوقة في العالم',
+          description:
+            'تشكيلة شاملة من أكثر الشركات المصنعة الموثوقة في العالم',
         },
         {
           title: 'أسعار تنافسية مع جودة ثابتة',
@@ -312,21 +336,22 @@ const arabicContent: Content = {
   },
   about: {
     hero: {
-      title: 'عن جالاكسي لتجارة الإطارات',
+      title: 'عن جالاكسي لتجارة الإطارات ش.ذ.م.م',
     },
     overview: {
       title: 'من نحن',
       paragraphs: [
         'جالاكسي لتجارة الإطارات ش.ذ.م.م هي شركة تجارة إطارات مقرها الإمارات متخصصة في استيراد وتصدير وتوزيع الإطارات عالية الجودة.',
         'من خلال شراكتنا القوية مع إطارات ومصنع فورس لاند، نضمن حصول عملائنا على إطارات تجمع بين التصميم المتقدم ومعايير السلامة الدولية والأداء طويل الأمد.',
-        'تقع جالاكسي لتجارة الإطارات في المنطقة الحرة بالإمارات، وهي في موقع استراتيجي لخدمة الأسواق المحلية والدولية بكفاءة.',
+        'تقع جالاكسي لتجارة الإطارات ش.ذ.م.م في المنطقة الحرة بالإمارات، وهي في موقع استراتيجي لخدمة الأسواق المحلية والدولية بكفاءة.',
         'لقد جعل التزامنا بالجودة والثقة ورضا العملاء منا واحدة من أكثر موردي الإطارات موثوقية في المنطقة.',
-        'في جالاكسي للإطارات، نؤمن بأن كل رحلة تستحق قبضة يمكن الاعتماد عليها - ونتأكد من أن إطاراتنا توفر ذلك تماماً.',
+        'في جالاكسي لتجارة الإطارات ش.ذ.م.م، نؤمن بأن كل رحلة تستحق قبضة يمكن الاعتماد عليها - ونتأكد من أن إطاراتنا توفر ذلك تماماً.',
       ],
     },
     vision: {
       title: 'رؤيتنا',
-      content: 'أن نصبح شركة تجارة الإطارات الأكثر ثقة وتفضيلاً في الشرق الأوسط، المعروفة بالموثوقية والابتكار والشراكات مع العلامات التجارية المعترف بها عالمياً.',
+      content:
+        'أن نصبح شركة تجارة الإطارات الأكثر ثقة وتفضيلاً في الشرق الأوسط، المعروفة بالموثوقية والابتكار والشراكات مع العلامات التجارية المعترف بها عالمياً.',
     },
     mission: {
       title: 'مهمتنا',
@@ -339,7 +364,8 @@ const arabicContent: Content = {
     },
     purpose: {
       title: 'هدفنا',
-      content: 'هدفنا هو ربط السائقين وتجار التجزئة والشركات بحلول الإطارات الأكثر موثوقية في العالم. نهدف إلى جعل التنقل أكثر أماناً وسلاسة واستدامة من خلال التحسين المستمر والتعاون العالمي الموثوق.',
+      content:
+        'هدفنا هو ربط السائقين وتجار التجزئة والشركات بحلول الإطارات الأكثر موثوقية في العالم. نهدف إلى جعل التنقل أكثر أماناً وسلاسة واستدامة من خلال التحسين المستمر والتعاون العالمي الموثوق.',
     },
   },
   services: {
@@ -352,15 +378,18 @@ const arabicContent: Content = {
       items: [
         {
           title: 'إطارات سيارات الركاب',
-          description: 'إطارات عالية الأداء مصممة للراحة والسلامة وكفاءة استهلاك الوقود على طرق المدينة والطرق السريعة.',
+          description:
+            'إطارات عالية الأداء مصممة للراحة والسلامة وكفاءة استهلاك الوقود على طرق المدينة والطرق السريعة.',
         },
         {
           title: 'إطارات سيارات الدفع الرباعي',
-          description: 'إطارات قوية وموثوقة مصممة للراحة على الطرق المعبدة ومغامرات الطرق الوعرة.',
+          description:
+            'إطارات قوية وموثوقة مصممة للراحة على الطرق المعبدة ومغامرات الطرق الوعرة.',
         },
         {
           title: 'إطارات المركبات التجارية الخفيفة',
-          description: 'إطارات متينة مصممة للاستخدام التجاري مع قدرة تحميل محسنة وعمر أطول.',
+          description:
+            'إطارات متينة مصممة للاستخدام التجاري مع قدرة تحميل محسنة وعمر أطول.',
         },
       ],
     },
@@ -368,7 +397,16 @@ const arabicContent: Content = {
       title: 'علاماتنا التجارية',
       mainBrand: 'العلامة التجارية الرئيسية',
       otherBrands: 'علامات تجارية أخرى متميزة',
-      brandList: ['فورس لاند', 'دنلوب', 'يوكوهاما', 'ميشلان', 'بريدجستون', 'كونتيننتال', 'هانكوك', 'بيريللي'],
+      brandList: [
+        'فورس لاند',
+        'دنلوب',
+        'يوكوهاما',
+        'ميشلان',
+        'بريدجستون',
+        'كونتيننتال',
+        'هانكوك',
+        'بيريللي',
+      ],
     },
   },
   contact: {
@@ -386,15 +424,17 @@ const arabicContent: Content = {
     },
     info: {
       title: 'معلومات الاتصال',
-      address: 'المنطقة الحرة بجبل علي، دبي، الإمارات العربية المتحدة',
+      address:
+        'شركة جالاكسي لتجارة الإطارات ش.ذ.م.م، منطقة حرة، جبل علي - جافزا ون، الإمارات العربية المتحدة، المبنى ب، الطابق 13، المكتب 1',
       phone: '+971508679467',
       email: 'anasbaghdad12@gmail.com',
     },
   },
   footer: {
     about: {
-      title: 'عن جالاكسي للإطارات',
-      description: 'الشريك الرسمي لإطارات فورس لاند وموزع العلامات التجارية العالمية المتميزة للإطارات التي تخدم الإمارات والأسواق الدولية.',
+      title: 'عن جالاكسي لتجارة الإطارات ش.ذ.م.م',
+      description:
+        'الشريك الرسمي لإطارات فورس لاند وموزع العلامات التجارية العالمية المتميزة للإطارات التي تخدم الإمارات والأسواق الدولية.',
     },
     quickLinks: {
       title: 'روابط سريعة',
@@ -405,7 +445,7 @@ const arabicContent: Content = {
     copyright: '© 2025 جالاكسي لتجارة الإطارات ش.ذ.م.م. جميع الحقوق محفوظة.',
   },
   company: {
-    name: 'جالاكسي للإطارات',
+    name: 'جالاكسي لتجارة الإطارات',
     tagline: 'نقود الجودة. نقدم الثقة.',
     fullName: 'جالاكسي لتجارة الإطارات ش.ذ.م.م',
   },
@@ -424,10 +464,10 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     const html = document.documentElement;
     const body = document.body;
-    
+
     html.lang = language;
     html.dir = isRTL ? 'rtl' : 'ltr';
-    
+
     if (isRTL) {
       body.classList.add('font-arabic');
       body.classList.remove('font-sans');
