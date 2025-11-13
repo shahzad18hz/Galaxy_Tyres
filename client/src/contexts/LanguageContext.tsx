@@ -241,7 +241,7 @@ const englishContent: Content = {
     },
     info: {
       title: 'Contact Information',
-      address: 'Jebel Ali Free Zone, Dubai, UAE',
+      address: 'Galaxy tires trading FZE  Jebel Ali - Jafza one  Freezone - UAE  Building B - floor 13 office 1',
       phone: '+971508679467',
       email: 'anasbaghdad12@gmail.com',
     },
