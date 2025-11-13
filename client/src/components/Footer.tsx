@@ -21,13 +21,6 @@ export function Footer() {
     { path: '/contact', label: content.nav.contact },
   ];
 
-  const socialLinks = [
-    { icon: Facebook, label: 'Facebook', href: '#' },
-    { icon: Twitter, label: 'Twitter', href: '#' },
-    { icon: Instagram, label: 'Instagram', href: '#' },
-    { icon: Linkedin, label: 'LinkedIn', href: '#' },
-  ];
-
   const brandLogos = [
     forcelandLogo,
     dunlopLogo,
@@ -131,24 +124,12 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-border">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-muted-foreground" data-testid="text-copyright">
+        <div className="pt-8  border-t border-border">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+            <p className="text-sm text-center text-muted-foreground" data-testid="text-copyright">
               {content.footer.copyright}
             </p>
-            <div className="flex items-center gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-10 h-10 rounded-md bg-background border border-border flex items-center justify-center hover-elevate transition-all duration-300 text-muted-foreground hover:text-primary"
-                  data-testid={`link-social-${social.label.toLowerCase()}`}
-                >
-                  <social.icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
+           
           </div>
         </div>
       </div>

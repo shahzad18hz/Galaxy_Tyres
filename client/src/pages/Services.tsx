@@ -5,9 +5,9 @@ import { Badge } from '@/components/ui/badge';
 import { Car, Truck, Landmark } from 'lucide-react';
 
 import passengerTire from '@assets/generated_images/Passenger_car_tire_7e641330.png';
-import suvTire from '@assets/generated_images/SUV_all-terrain_tire_deb71395.png';
+import suvTire from '@assets/generated_images/Sports_tire_close-up_8119047c.png';
 import truckTire from '@assets/generated_images/Light_truck_tire_aab183ee.png';
-import sportsTire from '@assets/generated_images/Sports_tire_close-up_8119047c.png';
+import sportsTire from '@assets/generated_images/Passenger_car_tire_7e641330.png';
 
 export default function Services() {
   const { content, isRTL } = useLanguage();

@@ -31,6 +31,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen pt-20">
+      {/* Hero Section */}
       <section className="relative h-[40vh] overflow-hidden">
         <img
           src={officeBuilding}
@@ -66,9 +67,11 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* Contact Form + Info Section */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+            {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: isRTL ? 20 : -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -156,6 +159,7 @@ export default function Contact() {
               </Card>
             </motion.div>
 
+            {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, x: isRTL ? -20 : 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -199,7 +203,7 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div className={`flex items-start gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                  <div className={`flex items-start gap-3  ${isRTL ? 'flex-row-reverse' : ''} `}>
                     <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <Mail className="h-5 w-5 text-primary" />
                     </div>
@@ -217,26 +221,11 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div className={`flex items-start gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Clock className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-medium text-foreground mb-1">
-                        {isRTL ? 'ساعات العمل' : 'Business Hours'}
-                      </p>
-                      <p className="text-sm text-muted-foreground">
-                        {isRTL ? 'الأحد - الخميس: 8:00 - 18:00' : 'Sunday - Thursday: 8:00 AM - 6:00 PM'}
-                      </p>
-                      <p className="text-sm text-muted-foreground">
-                        {isRTL ? 'السبت: 9:00 - 14:00' : 'Saturday: 9:00 AM - 2:00 PM'}
-                      </p>
-                    </div>
-                  </div>
+        
                 </div>
               </Card>
 
-              <Card className="p-6 bg-primary/5 border-primary/20">
+              {/* <Card className="p-6 bg-primary/5 border-primary/20">
                 <h4 className="font-semibold text-foreground mb-2">
                   {isRTL ? 'هل تحتاج مساعدة فورية؟' : 'Need Immediate Assistance?'}
                 </h4>
@@ -253,26 +242,25 @@ export default function Contact() {
                 >
                   {isRTL ? 'اتصل الآن' : 'Call Now'}
                 </Button>
-              </Card>
+              </Card> */}
             </motion.div>
           </div>
         </div>
       </section>
 
+      {/* Google Maps Section */}
       <section className="py-12 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="overflow-hidden">
-            <div className="h-96 bg-muted flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-                <p className="text-muted-foreground">
-                  {isRTL ? 'خريطة الموقع' : 'Map Location'}
-                </p>
-                <p className="text-sm text-muted-foreground mt-2">
-                  Jebel Ali Free Zone, Dubai, UAE
-                </p>
-              </div>
-            </div>
+          <Card className="overflow-hidden h-96">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115712.94427838559!2d54.97524776917445!3d24.999113243762697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f1212286cda85%3A0xe1416ab0e66bdcbe!2sMena%20Jabal%20Ali%20-%20Jebel%20Ali%20Freezone%20-%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1762992354068!5m2!1sen!2s"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </Card>
         </div>
       </section>
