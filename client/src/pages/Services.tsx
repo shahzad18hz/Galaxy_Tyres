@@ -13,7 +13,6 @@ export default function Services() {
   const { content, isRTL } = useLanguage();
 
   const categoryIcons = [Car, Truck, Truck];
-
   const categoryImages = [passengerTire, suvTire, truckTire];
 
   const fadeInUp = {
@@ -25,6 +24,8 @@ export default function Services() {
 
   return (
     <div className="min-h-screen pt-20">
+      
+      {/* HERO SECTION */}
       <section className="relative h-[40vh] overflow-hidden">
         <img
           src={sportsTire}
@@ -44,14 +45,13 @@ export default function Services() {
               <motion.h1
                 className="text-4xl md:text-5xl font-bold text-foreground mb-4"
                 variants={fadeInUp}
-                data-testid="text-services-hero-title"
               >
                 {content.services.hero.title}
               </motion.h1>
+
               <motion.p
                 className="text-xl text-muted-foreground"
                 variants={fadeInUp}
-                data-testid="text-services-hero-subtitle"
               >
                 {content.services.hero.subtitle}
               </motion.p>
@@ -60,21 +60,25 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-20 bg-background">
+      {/* CATEGORY SECTION */}
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12"
-            data-testid="text-categories-title"
           >
             {content.services.categories.title}
           </motion.h2>
 
+          {/* CATEGORY CARDS */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
             {content.services.categories.items.map((category, index) => {
               const Icon = categoryIcons[index];
+
               return (
                 <motion.div
                   key={index}
@@ -83,54 +87,63 @@ export default function Services() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Card className="overflow-hidden h-full hover-elevate transition-all duration-300" data-testid={`card-category-${index}`}>
-                    <div className="relative h-64 overflow-hidden">
+                  <Card className="overflow-hidden h-full hover-elevate transition-all duration-300">
+
+                    {/* IMAGE — CLEAN */}
+                    <div className="h-64 overflow-hidden">
                       <img
                         src={categoryImages[index]}
                         alt={category.title}
                         className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
-                      <div className="absolute bottom-4 left-4 right-4">
-                        <div className="flex items-center gap-2 mb-2">
-                          <Icon className="h-6 w-6 text-primary" />
-                          <h3 className="text-xl font-bold text-foreground">
-                            {category.title}
-                          </h3>
-                        </div>
-                      </div>
                     </div>
-                    <div className="p-6">
+
+                    {/* ICON + TITLE — BELOW IMAGE */}
+                    <div className="p-6 pb-2 flex items-center gap-3">
+                      <Icon className="h-7 w-7 text-primary" />
+                      <h3 className="text-xl font-bold text-foreground">
+                        {category.title}
+                      </h3>
+                    </div>
+
+                    {/* DESCRIPTION */}
+                    <div className="px-6 pb-6">
                       <p className="text-muted-foreground leading-relaxed">
                         {category.description}
                       </p>
                     </div>
+
                   </Card>
                 </motion.div>
               );
             })}
+
           </div>
         </div>
       </section>
 
+      {/* BRANDS SECTION */}
       <section className="py-20 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="text-brands-title">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               {content.services.brands.title}
             </h2>
+
             <p className="text-lg text-muted-foreground">
               {isRTL
                 ? 'نوزع أفضل العلامات التجارية العالمية للإطارات'
-                : 'Distributing the world\'s finest tyre brands'}
+                : "Distributing the world's finest tyre brands"}
             </p>
           </motion.div>
 
+          {/* MAIN BRAND */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -147,6 +160,7 @@ export default function Services() {
                     {brands[0]}
                   </h3>
                 </div>
+
                 <Badge variant="outline" className="text-sm px-4 py-2">
                   {isRTL ? 'الشريك الرسمي' : 'Official Partner'}
                 </Badge>
@@ -154,13 +168,14 @@ export default function Services() {
             </Card>
           </motion.div>
 
+          {/* OTHER BRANDS */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-6"
+            className="mb-6 text-center"
           >
-            <h3 className="text-xl font-semibold text-foreground mb-4 text-center">
+            <h3 className="text-xl font-semibold text-foreground mb-4">
               {content.services.brands.otherBrands}
             </h3>
           </motion.div>
@@ -175,7 +190,7 @@ export default function Services() {
                 transition={{ delay: index * 0.05 }}
                 whileHover={{ y: -4 }}
               >
-                <Card className="p-4 flex items-center justify-center h-24 hover-elevate transition-all duration-300" data-testid={`card-brand-${index + 1}`}>
+                <Card className="p-4 flex items-center justify-center h-24 hover-elevate transition-all duration-300">
                   <span className="text-sm font-semibold text-foreground text-center">
                     {brand}
                   </span>
@@ -183,11 +198,14 @@ export default function Services() {
               </motion.div>
             ))}
           </div>
+
         </div>
       </section>
 
+      {/* QUALITY SECTION */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -200,14 +218,17 @@ export default function Services() {
                 ? 'جودة مضمونة، أسعار تنافسية'
                 : 'Guaranteed Quality, Competitive Pricing'}
             </h3>
+
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               {isRTL
                 ? 'جميع منتجاتنا أصلية ومعتمدة من المصنعين العالميين مع ضمان الجودة والأداء'
                 : 'All our products are authentic and certified by global manufacturers with guaranteed quality and performance'}
             </p>
           </motion.div>
+
         </div>
       </section>
+
     </div>
   );
 }

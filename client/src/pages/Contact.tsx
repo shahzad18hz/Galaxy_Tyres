@@ -1,27 +1,40 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+"use client";
 
-import officeBuilding from '@assets/generated_images/Corporate_office_building_d277f73a.png';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { MapPin, Phone, Mail } from "lucide-react";
+
+import officeBuilding from "@assets/generated_images/Corporate_office_building_d277f73a.png";
 
 export default function Contact() {
   const { content, isRTL } = useLanguage();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [success, setSuccess] = useState(false);
+
+  // ---------------------------
+  // FORM SUBMIT WITHOUT REDIRECT + POPUP
+  // ---------------------------
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+
+    const formData = new FormData(e.target);
+
+    await fetch("https://formsubmit.co/anasbaghdad12@gmail.com", {
+      method: "POST",
+      body: formData,
+    });
+
+    setSuccess(true);
+    e.target.reset();
+
+    // Hide popup after 3 seconds
+    setTimeout(() => setSuccess(false), 3000);
   };
 
   const fadeInUp = {
@@ -30,7 +43,17 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-20 relative">
+
+      {/* SUCCESS POPUP */}
+      <div
+        className={`fixed top-6 right-6 z-[9999] px-6 py-4 rounded-lg shadow-lg text-white font-semibold bg-green-600 transition-all duration-500 ${
+          success ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5"
+        }`}
+      >
+        ✔ Your message has been sent successfully!
+      </div>
+
       {/* Hero Section */}
       <section className="relative h-[40vh] overflow-hidden">
         <img
@@ -51,14 +74,12 @@ export default function Contact() {
               <motion.h1
                 className="text-4xl md:text-5xl font-bold text-foreground mb-4"
                 variants={fadeInUp}
-                data-testid="text-contact-hero-title"
               >
                 {content.contact.hero.title}
               </motion.h1>
               <motion.p
                 className="text-xl text-muted-foreground"
                 variants={fadeInUp}
-                data-testid="text-contact-hero-subtitle"
               >
                 {content.contact.hero.subtitle}
               </motion.p>
@@ -67,11 +88,12 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Contact Form + Info Section */}
+      {/* Contact Form */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-            {/* Contact Form */}
+            
+            {/* FORM SECTION */}
             <motion.div
               initial={{ opacity: 0, x: isRTL ? 20 : -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -79,87 +101,63 @@ export default function Contact() {
               className="lg:col-span-3"
             >
               <Card className="p-8">
-                <h2 className="text-2xl font-bold text-foreground mb-6" data-testid="text-form-title">
+                <h2 className="text-2xl font-bold text-foreground mb-6">
                   {content.contact.form.title}
                 </h2>
+
+                {/* FORM */}
                 <form onSubmit={handleSubmit} className="space-y-6">
+
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_template" value="table" />
+
                   <div>
-                    <Label htmlFor="name" className="text-foreground">
-                      {content.contact.form.name}
-                    </Label>
-                    <Input
-                      id="name"
-                      type="text"
-                      value={formData.name}
-                      onChange={(e) =>
-                        setFormData({ ...formData, name: e.target.value })
-                      }
-                      className="mt-2"
-                      data-testid="input-name"
-                    />
+                    <Label htmlFor="name">Name</Label>
+                    <Input id="name" name="name" required className="mt-2" />
                   </div>
 
                   <div>
-                    <Label htmlFor="email" className="text-foreground">
-                      {content.contact.form.email}
-                    </Label>
+                    <Label htmlFor="email">Email</Label>
                     <Input
                       id="email"
+                      name="email"
                       type="email"
-                      value={formData.email}
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
+                      required
                       className="mt-2"
-                      data-testid="input-email"
                     />
                   </div>
 
                   <div>
-                    <Label htmlFor="phone" className="text-foreground">
-                      {content.contact.form.phone}
-                    </Label>
+                    <Label htmlFor="phone">Phone</Label>
                     <Input
                       id="phone"
+                      name="phone"
                       type="tel"
-                      value={formData.phone}
-                      onChange={(e) =>
-                        setFormData({ ...formData, phone: e.target.value })
-                      }
+                      required
                       className="mt-2"
-                      data-testid="input-phone"
                     />
                   </div>
 
                   <div>
-                    <Label htmlFor="message" className="text-foreground">
-                      {content.contact.form.message}
-                    </Label>
+                    <Label htmlFor="message">Message</Label>
                     <Textarea
                       id="message"
-                      value={formData.message}
-                      onChange={(e) =>
-                        setFormData({ ...formData, message: e.target.value })
-                      }
+                      name="message"
                       rows={5}
+                      required
                       className="mt-2"
-                      data-testid="input-message"
                     />
                   </div>
 
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full md:w-auto"
-                    data-testid="button-submit"
-                  >
+                  <Button type="submit" size="lg">
                     {content.contact.form.submit}
                   </Button>
                 </form>
+
               </Card>
             </motion.div>
 
-            {/* Contact Info */}
+            {/* RIGHT SIDE INFO */}
             <motion.div
               initial={{ opacity: 0, x: isRTL ? -20 : 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -167,101 +165,59 @@ export default function Contact() {
               className="lg:col-span-2 space-y-6"
             >
               <Card className="p-6">
-                <h3 className="text-xl font-bold text-foreground mb-6" data-testid="text-info-title">
+                <h3 className="text-xl font-bold text-foreground mb-6">
                   {content.contact.info.title}
                 </h3>
+
                 <div className="space-y-4">
-                  <div className={`flex items-start gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+
+                  <div className={`flex items-start gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
+                    <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center">
                       <MapPin className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <p className="font-medium text-foreground mb-1">
-                        {isRTL ? 'العنوان' : 'Address'}
-                      </p>
-                      <p className="text-sm text-muted-foreground" data-testid="text-address">
+                      <p className="font-medium text-foreground">Address</p>
+                      <p className="text-sm text-muted-foreground">
                         {content.contact.info.address}
                       </p>
                     </div>
                   </div>
 
-                  <div className={`flex items-start gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div className={`flex items-start gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
+                    <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center">
                       <Phone className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <p className="font-medium text-foreground mb-1">
-                        {isRTL ? 'الهاتف' : 'Phone'}
-                      </p>
+                      <p className="font-medium text-foreground">Phone</p>
                       <a
                         href={`tel:${content.contact.info.phone}`}
-                        className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                        data-testid="link-phone"
+                        className="text-sm text-muted-foreground hover:text-primary"
                       >
                         {content.contact.info.phone}
                       </a>
                     </div>
                   </div>
 
-                  <div className={`flex items-start gap-3  ${isRTL ? 'flex-row-reverse' : ''} `}>
-                    <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div className={`flex items-start gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
+                    <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center">
                       <Mail className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <p className="font-medium text-foreground mb-1">
-                        {isRTL ? 'البريد الإلكتروني' : 'Email'}
-                      </p>
+                      <p className="font-medium text-foreground">Email</p>
                       <a
                         href={`mailto:${content.contact.info.email}`}
-                        className="text-sm text-muted-foreground hover:text-primary transition-colors break-all"
-                        data-testid="link-email"
+                        className="text-sm text-muted-foreground hover:text-primary break-all"
                       >
                         {content.contact.info.email}
                       </a>
                     </div>
                   </div>
 
-        
                 </div>
               </Card>
-
-              {/* <Card className="p-6 bg-primary/5 border-primary/20">
-                <h4 className="font-semibold text-foreground mb-2">
-                  {isRTL ? 'هل تحتاج مساعدة فورية؟' : 'Need Immediate Assistance?'}
-                </h4>
-                <p className="text-sm text-muted-foreground mb-4">
-                  {isRTL
-                    ? 'فريقنا جاهز للمساعدة في جميع استفساراتك عن الإطارات'
-                    : 'Our team is ready to help with all your tyre inquiries'}
-                </p>
-                <Button
-                  size="sm"
-                  className="w-full"
-                  onClick={() => window.location.href = `tel:${content.contact.info.phone}`}
-                  data-testid="button-call-now"
-                >
-                  {isRTL ? 'اتصل الآن' : 'Call Now'}
-                </Button>
-              </Card> */}
             </motion.div>
-          </div>
-        </div>
-      </section>
 
-      {/* Google Maps Section */}
-      <section className="py-12 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="overflow-hidden h-96">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115712.94427838559!2d54.97524776917445!3d24.999113243762697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f1212286cda85%3A0xe1416ab0e66bdcbe!2sMena%20Jabal%20Ali%20-%20Jebel%20Ali%20Freezone%20-%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1762992354068!5m2!1sen!2s"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </Card>
+          </div>
         </div>
       </section>
     </div>
