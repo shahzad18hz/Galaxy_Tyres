@@ -25,7 +25,7 @@ export default function Contact() {
 
     const formData = new FormData(e.target);
 
-    await fetch("https://formsubmit.co/anasbaghdad12@gmail.com", {
+    await fetch("https://formsubmit.co/shahzad18hz@gmail.com", {
       method: "POST",
       body: formData,
     });
