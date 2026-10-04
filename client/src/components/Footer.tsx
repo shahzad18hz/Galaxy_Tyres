@@ -110,16 +110,7 @@ export function Footer() {
                   {content.contact.info.phone}
                 </a>
               </div>
-              <div className={`flex items-center gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                <a
-                  href={`mailto:${content.contact.info.email}`}
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  data-testid="link-footer-email"
-                >
-                  {content.contact.info.email}
-                </a>
-              </div>
+      
             </div>
           </div>
         </div>
