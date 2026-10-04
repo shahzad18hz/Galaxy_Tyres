@@ -202,15 +202,7 @@ export default function Contact() {
                     <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center">
                       <Mail className="h-5 w-5 text-primary" />
                     </div>
-                    <div>
-                      <p className="font-medium text-foreground">Email</p>
-                      <a
-                        href={`mailto:${content.contact.info.email}`}
-                        className="text-sm text-muted-foreground hover:text-primary break-all"
-                      >
-                        {content.contact.info.email}
-                      </a>
-                    </div>
+                   
                   </div>
 
                 </div>
