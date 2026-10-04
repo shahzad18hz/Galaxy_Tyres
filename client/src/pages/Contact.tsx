@@ -198,12 +198,7 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div className={`flex items-start gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
-                    <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center">
-                      <Mail className="h-5 w-5 text-primary" />
-                    </div>
-                   
-                  </div>
+              
 
                 </div>
               </Card>
