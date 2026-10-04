@@ -261,7 +261,7 @@ const englishContent: Content = {
       title: 'Contact Information',
       address:
         'Galaxy Tires Trading FZE Jebel Ali - Jafza one Freezone - UAE Building B - floor 13 office 1',
-      phone: '+971508679467',
+      phone: '+9710562529352',
       email: 'anasbaghdad12@gmail.com',
     },
   },
@@ -426,7 +426,7 @@ const arabicContent: Content = {
       title: 'معلومات الاتصال',
       address:
         'شركة جالاكسي لتجارة الإطارات ش.ذ.م.م، منطقة حرة، جبل علي - جافزا ون، الإمارات العربية المتحدة، المبنى ب، الطابق 13، المكتب 1',
-      phone: '+971508679467',
+      phone: '+9710562529352',
       email: 'anasbaghdad12@gmail.com',
     },
   },
